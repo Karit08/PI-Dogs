@@ -6,16 +6,16 @@ module.exports = (sequelize) => {
   sequelize.define('dog', 
   {
     id: {
-      type: DataTypes.UUID,
+      type: DataTypes.UUID, // genera numero random con letras y numeros, unico, especifico y no se repite
       defaultValue: DataTypes.UUIDV4,
-      allowNull: false,
-      primaryKey: true,
+      allowNull: false, // no permite que este vacio, este campo es requerido (false)
+      primaryKey: true, //clave primaria, el id
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    min_heightMin: {
+    min_height: {
       type: DataTypes.STRING,
       allowNull: false,
     },
